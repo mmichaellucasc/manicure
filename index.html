@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Manicure & Pedicure</title>
+    <link rel="stylesheet" href="index.css.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="manicure.png" alt="Serviço de manicure e pedicure">
+        </div>
+        <div class="content">
+            <h1>Agende seu horário</h1>
+            <form id="bookingForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="day">Escolha o Dia:</label>
+                <select id="day" name="day" required>
+                    <option value="Segunda-feira">Segunda-feira</option>
+                    <option value="Quinta-feira">Quinta-feira</option>
+                </select>
+
+                <label for="time">Escolha o Horário:</label>
+                <input type="range" id="time" name="time" min="8" max="18" step="1" oninput="updateTimeDisplay(this.value)">
+                <span id="timeDisplay">08:00</span>
+
+                <label for="service">Escolha o Serviço:</label>
+                <select id="service" name="service" required>
+                    <option value="Mão - R$25">Mão - R$25</option>
+                    <option value="Pé - R$30">Pé - R$30</option>
+                    <option value="Mão e Pé - R$50">Mão e Pé - R$50</option>
+                </select>
+
+                <button type="button" onclick="sendToWhatsApp()">Agendar</button>
+            </form>
+        </div>
+    </div>
+     <!-- Link do arquivo JavaScript -->
+     <script src="script.js"></script>
+
+</body>
+</html>
+
+
